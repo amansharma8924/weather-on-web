@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather On Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-default">
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">Weather on Web</h1>
+      <form class="search" id="searchForm" role="search">
+        <input
+          type="text"
+          class="search__input"
+          id="searchInput"
+          placeholder="Search for a city..."
+          autocomplete="off"
+          aria-label="City name"
+        />
+        <button type="submit" class="search__btn" aria-label="Search">Search</button>
+      </form>
+    </header>
+
+    <div class="spinner" id="spinner" hidden>
+      <div class="spinner__circle"></div>
+      <p class="spinner__text">Fetching weather...</p>
+    </div>
+
+    <div class="message message--error" id="errorBox" hidden>
+      <p class="message__text" id="errorText"></p>
+    </div>
+
+    <section class="weather" id="weatherCard" hidden>
+      <div class="weather__main">
+        <img class="weather__icon" id="weatherIcon" src="" alt="" />
+        <div class="weather__temp-block">
+          <p class="weather__temp" id="temp"></p>
+          <p class="weather__condition" id="condition"></p>
+        </div>
+      </div>
+
+      <div class="weather__location">
+        <h2 class="weather__city" id="city"></h2>
+        <p class="weather__meta" id="datetime"></p>
+      </div>
+
+      <ul class="details">
+        <li class="details__item">
+          <span class="details__label">Feels like</span>
+          <span class="details__value" id="feelsLike"></span>
+        </li>
+        <li class="details__item">
+          <span class="details__label">Humidity</span>
+          <span class="details__value" id="humidity"></span>
+        </li>
+        <li class="details__item">
+          <span class="details__label">Wind</span>
+          <span class="details__value" id="wind"></span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
