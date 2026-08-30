@@ -1,4 +1,4 @@
-const API_KEY = "e1e0dfe8fc4ec83b7e033ce700292299"; // put ur openweathermap key here
+const API_KEY = "Put_ur_openweathermap_APIKey_her"; // put ur openweathermap key here
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 const UNITS = "metric"
 var DEFAULT_CITY = "India"
